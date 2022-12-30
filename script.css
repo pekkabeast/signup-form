@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: stretch;
+}
+
+.sidePane {
+    width: max(30%,300px);
+    background-image: url("bgpic.jpg");
+    background-size:cover;
+    background-position:40%;
+    opacity: 90%;
+    
+}
+
+.mainPane {
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    
+    background-color: #F1EBEA;
+}
+
+.blurb{
+    padding: 2em;
+}
+
+.signUp{
+    margin-top: 100px;
+    padding: 2em;
+    background-color: white;
+    
+    
+}
+
+.signUp fieldset{
+    border: none;
+}
+
+.signUp fieldset legend{
+    margin-bottom: 1em;
+}
+
