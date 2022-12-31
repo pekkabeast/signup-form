@@ -3,8 +3,14 @@
     padding: 0;
 }
 
-html,body {
+html,
+body {
     height: 100%;
+}
+
+@font-face {
+    font-family: japanFont;
+    src: url("fonts/go3v2-webfont.woff");
 }
 
 body {
@@ -13,40 +19,56 @@ body {
 }
 
 .sidePane {
-    width: max(30%,300px);
+    width: max(30%, 300px);
     background-image: url("bgpic.jpg");
-    background-size:cover;
-    background-position:40%;
+    background-size: cover;
+    background-position: 40%;
     opacity: 90%;
-    
+    font-family: japanFont;
+    color: white;
+    position: relative;
+
 }
+
+.sidePane h1 {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    height: 4rem;
+    position: absolute;
+    top: 30%;
+    font-size: 3rem;
+    padding-top: 0.5rem;
+}
+
 
 .mainPane {
     width: 70%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    
     background-color: #F1EBEA;
+    position: relative;
+    min-height: auto;
 }
 
-.blurb{
+.blurb {
     padding: 2em;
+    position: absolute;
+    top: 20vmin;
 }
 
-.signUp{
-    margin-top: 100px;
+.signUp {
+    
     padding: 2em;
     background-color: white;
-    
-    
+    position:absolute;
+    top: 40vmin;
+
 }
 
-.signUp fieldset{
+.signUp fieldset {
     border: none;
 }
 
-.signUp fieldset legend{
+.signUp fieldset legend {
     margin-bottom: 1em;
 }
-
