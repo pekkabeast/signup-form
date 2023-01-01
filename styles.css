@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+@font-face {
+    font-family: japanFont;
+    src: url("fonts/go3v2-webfont.woff");
+}
+
+body {
+    display: flex;
+    align-items: stretch;
+}
+
+.sidePane {
+    width: max(30%, 300px);
+    background-image: url("bgpic.jpg");
+    background-size: cover;
+    background-position: 40%;
+    opacity: 90%;
+    position: relative;
+    min-height: 500px;
+}
+
+.sidePane h1 {
+    font-family: japanFont;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background: rgba(14, 9, 9, 0.5);
+    position: absolute;
+    top: 30%;
+    font-size: 3rem;
+    padding:0.5rem;
+}
+
+
+.mainPane {
+    width: 70%;
+    background-color: #F1EBEA;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.blurb {
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blurb>p{
+    margin-bottom: 1rem;
+}
+
+
+.signUp {
+    padding: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+
+}
+
+.signUp legend {
+    font-size: 1.2rem;
+    padding-left:0.5rem;
+    
+}
+
+.signUp fieldset{
+    border: none;
+    display: grid;
+    grid-template-columns:50%;
+    grid-template-rows: auto;
+    grid-template-areas: "firstField secondField";
+}
+
+.signUp fieldset:first-child{
+    grid-area: firstField;
+}
+.signUp fieldset:last-child{
+    grid-area: secondField;
+}
+
+.signUp fieldset div{
+    padding: 0.5rem;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+}
+
+.signUp label{
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+    opacity: 80%;
+    
+}
+
+.signUp input[type="text"],input[type="email"],input[type="number"],input[type="password"]{
+    box-sizing: border-box;
+    appearance: none;
+    padding: 0.2rem;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: gray;
+    
+}
+
+.signUp input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="password"]:focus{
+    outline: none;
+    border: 2px 2pxsolid;
+    margin:-1px;
+    border-color: blue;
+    box-shadow: 1px 1px 2px gray;
+    
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+#createAccount input[type="submit"]{
+    margin-left:2rem;
+    margin-top: 2rem;
+    appearance: none;
+    font-weight: bold;
+    background-color: #3ba7bb; 
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.logIn{
+    appearance: none;
+    color: #3ba7bb;
+
+}
+
+a.logIn:link{
+    text-decoration: none;
+}
+
+input[type="password"]:invalid:focus{
+    border:2px solid red;
+
+}
+
